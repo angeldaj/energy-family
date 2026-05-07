@@ -38,7 +38,7 @@ const itemVariants = {
   open: {
     opacity: 1,
     x: 0,
-    transition: { type: "spring", stiffness: 320, damping: 28 },
+    transition: { type: "spring" as const, stiffness: 320, damping: 28 },
   },
 };
 
@@ -47,7 +47,7 @@ const ctaVariants = {
   open: {
     opacity: 1,
     y: 0,
-    transition: { delay: 0.42, duration: 0.35, ease: [0.2, 0.8, 0.2, 1] },
+    transition: { delay: 0.42, duration: 0.35, ease: [0.2, 0.8, 0.2, 1] as const },
   },
 };
 
@@ -101,7 +101,7 @@ export function Nav({ whatsappUrl }: NavProps) {
                   initial="initial"
                   animate="animate"
                   exit="exit"
-                  transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
+                  transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] as const }}
                   className="absolute inset-0 flex items-center justify-center"
                 >
                   <X className="size-5" />
@@ -113,7 +113,7 @@ export function Nav({ whatsappUrl }: NavProps) {
                   initial="initial"
                   animate="animate"
                   exit="exit"
-                  transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
+                  transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] as const }}
                   className="absolute inset-0 flex items-center justify-center"
                 >
                   <Menu className="size-5" />
